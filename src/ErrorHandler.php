@@ -33,6 +33,6 @@ class ErrorHandler
             $exceptionClass = B2Exception::class;
         }
 
-        throw new $exceptionClass('Received error from B2: '.$responseJson['message']);
+        throw new $exceptionClass('Received error from B2: '.$responseJson['message'], $responseJson['status']);
     }
 }
